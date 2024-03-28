@@ -1,0 +1,49 @@
+Calculadora
+
+
+#include <stdio.h>
+
+int main() {
+    float num1, num2;
+    char operador;
+    float resultado;
+
+    // Leitura dos dois números reais
+    printf("Digite o primeiro número real: ");
+    scanf("%f", &num1);
+    printf("Digite o segundo número real: ");
+    scanf("%f", &num2);
+
+    // Leitura do operador
+    printf("Digite o operador (+, -, *, /): ");
+    scanf(" %c", &operador);
+
+    // Verificação e execução da operação
+    switch (operador) {
+        case '+':
+            resultado = num1 + num2;
+            break;
+        case '-':
+            resultado = num1 - num2;
+            break;
+        case '*':
+            resultado = num1 * num2;
+            break;
+        case '/':
+            if (num2 != 0) {
+                resultado = num1 / num2;
+            } else {
+                printf("Erro! Divisão por zero não é permitida.\n");
+                return 1; // Saída do programa com erro
+            }
+            break;
+        default:
+            printf("Operador inválido!\n");
+            return 1; // Saída do programa com erro
+    }
+
+    // Imprime o resultado da operação
+    printf("Resultado: %.2f\n", resultado);
+
+    return 0; // Saída do programa sem erro
+}
