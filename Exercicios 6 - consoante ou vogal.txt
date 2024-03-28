@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+int main() {
+    char letra;
+
+    printf("Digite uma letra minúscula: ");
+    scanf(" %c", &letra); 
+
+    switch (letra) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            printf("%c é uma vogal.\n", letra);
+            break;
+        default:
+            if (letra >= 'a' && letra <= 'z') {
+                printf("%c é uma consoante.\n", letra);
+            } else {
+                printf("Entrada inválida. Por favor, digite uma letra minúscula.\n");
+            }
+            break;
+    }
+
+    return 0;
+}
