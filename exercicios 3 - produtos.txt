@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+
+int main() {
+    int codigo_produto;
+    int quantidade;
+    float preco;
+
+    printf("Digite o código do produto: ");
+    scanf("%d", &codigo_produto);
+
+    printf("Digite a quantidade desejada: ");
+    scanf("%d", &quantidade);
+
+    if (codigo_produto == 100)
+        preco = 1.20;
+    else if (codigo_produto == 101)
+        preco = 1.30;
+    else if (codigo_produto == 102)
+        preco = 1.50;
+    else if (codigo_produto == 103)
+        preco = 1.20;
+    else if (codigo_produto == 104)
+        preco = 1.70;
+    else if (codigo_produto == 105)
+        preco = 2.20;
+    else if (codigo_produto == 106)
+        preco = 1.00;
+    else {
+        printf("Código de produto inválido!\n");
+        return 1; // Saída do programa com erro
+    }
+
+    float total = preco * quantidade;
+    printf("Total a pagar: R$ %.2f\n", total);
+
+    return 0; // Saída do programa sem erro
+}
