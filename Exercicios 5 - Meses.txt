@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+
+int main() {
+    int numero_mes;
+
+    printf("Digite um número inteiro entre 1 e 12: ");
+    scanf("%d", &numero_mes);
+
+    if (numero_mes == 1)
+        printf("Janeiro\n");
+    else if (numero_mes == 2)
+        printf("Fevereiro\n");
+    else if (numero_mes == 3)
+        printf("Março\n");
+    else if (numero_mes == 4)
+        printf("Abril\n");
+    else if (numero_mes == 5)
+        printf("Maio\n");
+    else if (numero_mes == 6)
+        printf("Junho\n");
+    else if (numero_mes == 7)
+        printf("Julho\n");
+    else if (numero_mes == 8)
+        printf("Agosto\n");
+    else if (numero_mes == 9)
+        printf("Setembro\n");
+    else if (numero_mes == 10)
+        printf("Outubro\n");
+    else if (numero_mes == 11)
+        printf("Novembro\n");
+    else if (numero_mes == 12)
+        printf("Dezembro\n");
+    else
+        printf("Não existe mês correspondente ao número digitado.\n");
+
+    return 0;
+}
